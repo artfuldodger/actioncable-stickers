@@ -23,7 +23,7 @@ module Services
     end
 
     def broadcast_creation
-
+      StickerBroadcastJob.perform_now(sticker)
     end
 
     def random_sticker_url
